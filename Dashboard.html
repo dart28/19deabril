@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="module" src="assets/js/Main.js"></script>
+
+    <link rel="stylesheet" href="assets/css/Data.css">
+    <link rel="stylesheet" href="assets/css/GlobalStyle.css">
+    <link rel="stylesheet" href="assets/css/Dashboard.css">
+
+    <title>CommUnityHub</title>
+</head>
+<body>
+    <div id="container-main" class="container-main">
+        <div class="container-main__content">
+            <!-- Este es el contenedor principal que debe ser modificado dependiendo del archivo -->
+            <div class="frame">
+
+                <!-- Aqui se agregan el contenido de la aplicacion web de forma dinamica -->
+                <div class="nav-bar">
+                    <div class="nav-bar__logout">
+                        <button id="logout" class="button">
+                            <!--img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAABaElEQVR4nO3TPUiWURQH8N8gLe+k0BIIgR9hiNgQ7uKQm2Cv7g1GCiI4ODk4lau46NLu5KJLuChCiNSgS4rlooP6CuJ3EcoDR3h4fNVUJBT/cOGee/73/O/5uDzivmEWM3cRuAaTOIk1GWe3RhmG8BsFdMcqxNlQcK6NEnRgA38wgqcpfyk+4Rjb6MOTfw3ehIUoxRfUXsKtxlhwfyDvf6IN66lG3nStX5RJIQhrUdtk/w1/U5d/YSf2yfnPDHcei9gqJpCQPqMejWHnsB/7KVRET5KgH9CMhvC/iMHoD7uowMt4YRcOMgKd+I4efEULxlP/I58pVVGBZxlSLiXQHuX7iAksoQ6j4S+PCRy4TOA5jvAGuxmBrqhzksEchrEXgTdjSK7MYBCvMz14h15MoxKv4vO9jRdX4TDVg/cXCWyFYzmyOIkpWcFq2BvRm7MpWk5N0Rl3JTI6h3zU+Lb/YA2txQQe8UBxCk9Ink5WQzs0AAAAAElFTkSuQmCC"-->
+                            Volver
+                        </button>
+                    </div>
+                    <ul class="nav-bar__options">
+                        <li class="nav-bar__list-item selected">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAaklEQVR4nO2UsQ3AIAwEPQjZfwJgvE8DBZIhJjwyBSfRUPyhN7LI5URgPJXevcpDEIRReCYIUslqsIbCIFDr+iPAxCN8BBpgVrRdAO8hbxfg+F8EZkVSdkgiCOLXPloVhF74bF2VYS0Xf16wWByyXM5XqwAAAABJRU5ErkJggg==">
+                            <span>Ticket</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="dashboard">
+                
+                    <div class="dashboard__ticket">
+                        <div class="dashboard__ticket-group">
+                            <div class="dashboard__ticket-title">
+                                <h2>Tickets Pendientes</h2>
+                                <button data-action="window-ticket-controller" class="button">+</button>
+                            </div>
+                
+                            <ul class="dashboard__list-ticket">
+                                <!--li class="dashboard__item">
+                                    <span>Ticket:code</span>
+                                    <button data-action="window-controller" class="button">Detalles</button>
+                                </-->
+                            </ul>
+                        </div>
+                
+                        <div class="dashboard__ticket-group">
+                
+                            <div class="dashboard__ticket-title">
+                                <h2>Tickets Cerrados</h2>
+                            </div>
+                
+                            <ul class="dashboard__list-ticket">
+                            </ul>
+                
+                        </div>
+                    </div>
+                
+                    <div id="dashboard__show-data" class="dashboard__show-data">
+                
+                        <div class="show-data__close-window">
+                            <button id="close-window-show-ticket" class="button">X</button>
+                        </div>
+                
+                        <div class="show-data__title">
+                            <h1>Tabla Informativa</h1>
+                            <h3 data-action="view-data-list"></h3>
+                        </div>
+                
+                        <div class="show-data__data-group">
+                            <div class="show-data__info-ticket">
+                                <h2>Asunto: <span data-action="view-data-list"></span></h2>
+                                <h2>Fecha: <span data-action="view-data-list"></span></h2>
+                                <h2>Hora: <span data-action="view-data-list"></span></h2>
+                            </div>
+                            <div class="show-data__description-ticket">
+                                <h2>Descripción:</h2>
+                                
+                                <div class="text-area">
+                                    <span data-action="view-data-list"></span>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                
+                    <div id="dashboard__create-ticket" class="dashboard__create-ticket--disable">
+                
+                        <div class="dashboard__create-ticket-title">
+                            <h2>Nuevo Ticket</h2>
+                            <button data-action="window-ticket-controller" class="button">X</button>
+                        </div>
+                
+                        <div class="dashboard__input">
+                            <div class="dashboard__input-group">
+                                <label>Asunto:</label>
+                                <input data-action="input-ticket" class="text-field error" type="text" placeholder="Asunto">
+                            </div>
+                
+                            <div class="dashboard__input-group">
+                                <label>Descripcion:</label>
+                                <textarea data-action="input-ticket" class="text-area" placeholder="Descripcion"></textarea>
+                            </div>
+                        </div>
+                
+                        <div class="dashboard__button-create-ticket">
+                            <button id="register-ticket" class="button">Crear Ticket</button>
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crear pie de pagina para dar informacion sobre la version actual de la aplicacion -->
+        <div class="footer-info">
+            <h3 class="footer-info__title">Dart Industries | Project CommUnityHub</h3>
+            <h3 class="footer-info__title">Interface V0.2.0</h3>
+        </div>
+    </div>
+</body>
+</html>
+
+
+{% block container %}
+{% endblock %}

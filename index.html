@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="module" src="assets/js/Main.js"></script>
+
+    <link rel="stylesheet" href="assets/css/Data.css">
+    <link rel="stylesheet" href="assets/css/GlobalStyle.css">
+    <link rel="stylesheet" href="assets/css/Home.css">
+
+    <title>CommUnityHub</title>
+</head>
+<body>
+    <div id="container-main" class="container-main">
+        <div class="container-main__content">
+
+            <!-- Este es el contenedor principal que debe ser modificado dependiendo del archivo -->
+            <div class="frame">
+
+                <!-- Aqui se agregan el contenido de la aplicacion web de forma dinamica -->
+                <!-- Formulario del login -->
+                <div class="login-form">
+
+                    <div class="login-form__input-group">
+                        <h1>Acceder al Servicio</h1>
+                        <button id="buttonLogin" class="button" >Entrar</button>
+                    </div>
+                </div>
+
+                <div class="show-info">
+                    <div class="show-info__title-info">
+                        <h2>SERVICIO COMUNITARIO</h2>
+                    </div>
+
+                    <div class="show-info__data-group">
+
+                        <div class="show-info__post-table">
+
+                            <div class="post-group">
+                                <h2>¿Qué función cumple esta página?</h2>
+                                <div>
+                                    <span>
+                                        Proveer un servicio que permita
+                                        la interacción permanente entre
+                                        la comunidad y las estructuras de
+                                        gestión del territorio
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="post-group">
+                                <h2>¿Cuáles son los servicios que provee?</h2>
+                                <div>
+                                    <span>
+                                        1. Informar sobre los distintos temas de gestión colectiva. <br><br>
+
+                                        2. Suministrar los formatos que requiere la comunidad de manera personalizada y dinámica. <br><br>
+
+                                        3. Atender los requerimientos que reporte la comunidad a través de la página. <br><br>
+
+                                        4. Generar un medio de consulta permanente.
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="post-group">
+                                <h2>¿Tiene algún costo este servicio?</h2>
+                                <div>
+                                    <span>
+                                        Sí, porque es un medio tecnológico que
+                                        permite una gestión comunitaria avanzada. 
+                                        Como todo servicio, genera costos operativos
+                                        que serán cubiertos con el aporte de 30 bolívares
+                                        quincenales de quienes se afilien voluntariamente
+                                        al servicio y acepten las condiciones de uso.
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                
+                        <form class="show-info__send-data" action="https://formsubmit.co/5b5b6d521e5823fd4e09531c1a1cfa56" method="POST">
+
+                            <div class="show-info__title">
+                                <h3>Cuestionario de Evaluación</h3>
+                            </div>
+                
+                            <div class="show_info__message-group">
+                                <div>
+                                    <h2>¿Te parece positivo el servicio?</h2>
+                                    <div>
+                                        <label><input type="radio" name="test-1" value="Si" required> Si</label>
+                                        <label><input type="radio" name="test-1" value="No" required> No</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>¿Estás de acuerdo en afiliarte?</h2>
+                                    <div>
+                                        <label><input type="radio" name="test-2" value="Si" required> Si</label>
+                                        <label><input type="radio" name="test-2" value="No" required> No</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>¿Estás de acuerdo con la cuota de aporte quincenal (30 Bs)?</h2>
+                                    <div>
+                                        <label><input type="radio" name="test-3" value="Si" required> Si</label>
+                                        <label><input type="radio" name="test-3" value="No" required> No</label>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="show-info__input">
+                                <input id="send-email" class="button" type="submit" value="Enviar">
+                                <input type="hidden" name="_next" value="index.html">
+                                <input type="hidden" name="_captcha" value="false">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="notification" class="notification disable">
+                    <div class="notification__wait">
+                        <div class="notification__loading-dots">
+                            <span>Car</span>
+                            <span>gan</span>
+                            <span>do...</span>
+                        </div>
+                    </div>
+
+                    <div class="notification__accept-result disable">
+                        <span></span>
+                        <button id="close-notification" class="button">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crear pie de pagina para dar informacion sobre la version actual de la aplicacion -->
+        <div class="footer-info">
+            <h3 class="footer-info__title">Dart Industries | Project CommUnityHub</h3>
+            <h3 class="footer-info__title">Interface V0.2.0</h3>
+        </div>
+    </div>
+</body>
+</html>
