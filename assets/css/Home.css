@@ -1,0 +1,335 @@
+/* General - Dentro de esta seccion se colocara los estilos generales que se necesitaran */
+.frame {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+}
+
+/* Sección para el Login - Aqui se colocan todos los estilos para crear la estructura del formulario de login */
+.login-form {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    padding: 15px;
+    border-radius: 14px;
+    background-color: var(--login-form-color);
+}
+
+.login-form__input-group {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-form__input-group > button {
+    width: 100px;
+    height: 24px;
+}
+
+.login-form__input-group > h1 {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Seccion para los post y input de datos */
+.show-info {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 8px;
+    padding: 15px;
+    border-radius: 14px;
+    background-color: var(--login-form-color);
+}
+
+.show-info__title-info {
+    order: 1;
+    display: flex;
+    width: 100%;
+    height: 7%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-test);
+    color: var(--login-form-color);
+}
+
+.show-info__data-group {
+    order: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.show-info__post-table {
+    order: 1;
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+}
+
+.post-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    background-color: var(--color-test);
+    color: var(--login-form-color);
+}
+
+.post-group > h2 {
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.post-group > div {
+    width: 100%;
+    height: 94%;
+    overflow: auto;
+}
+
+.post-group > div > span {
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.show-info__send-data {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    width: 50%;
+    height: 100%;
+}
+
+.show-info__title {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+}
+
+.show-info__title > h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.show_info__message-group {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    gap: 50px;
+}
+    .show_info__message-group > div {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+        .show_info__message-group > div > div {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+            .show_info__message-group > div > div > label {
+                font-size: 20px;
+            }
+
+.show-info__input {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: max-content;
+}
+
+
+.show-info__input > .button {
+    width: 70px;
+    height: 24px;
+}
+
+
+.notification {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    left: 5%;
+    width: 90%;
+    height: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--login-form-color);
+    transition: top 0.3s ease-in;
+}
+
+.notification.disable {
+    top: -60%;
+    transition: top 0.3s ease-out;
+}
+
+    .notification__wait {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 7px;
+    }
+
+    .notification__wait.disable {
+        display: none;
+    }
+
+        .notification__loading-dots {
+            order: 2;
+            display: flex;
+            align-items: center;
+        }
+        
+        .notification__loading-dots span {
+            font-size: 32px;
+            width: max-content;
+            height: max-content;
+            opacity: 0;
+            animation: loading 1.5s infinite;
+        }
+        
+            .notification__loading-dots span:nth-child(1) {
+                animation-delay: 0s;
+            }
+            
+            .notification__loading-dots span:nth-child(2) {
+                animation-delay: 0.3s;
+            }
+            
+            .notification__loading-dots span:nth-child(3) {
+                animation-delay: 0.6s;
+            }
+
+    .notification__accept-result {
+        display: flex;
+        flex-direction: column;
+        padding: 70px 0 70px 0;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .notification__accept-result.disable {
+        display: none;
+    }
+
+        .notification__accept-result > span {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .notification__accept-result > .button {
+            width: 100px;
+            height: 40px;
+            font-size: 24px;
+        }
+
+
+@media (max-width: 768px) {
+
+    .frame {
+        display: block;
+        overflow: auto;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 40%;
+        padding: 15px;
+        border-radius: 14px;
+        margin-bottom: 10px;
+        background-color: var(--login-form-color);
+    }
+
+
+    .show-info {
+        display: block;
+        height: max-content;
+    }
+
+    .show-info__title-info {
+        text-align: center;
+        height: 4%;
+    }
+
+    .show-info__data-group {
+        display: block;
+    }
+
+    .show-info__post-table {
+        width: 100%;
+        height: max-content;
+    }
+
+    .post-group {
+        height: 460px;
+    }
+
+    .show-info__send-data {
+        width: 100%;
+    }
+
+    .show-info__input {
+        height: 350px;
+    }
+
+    .show-info__input > textarea {
+        height: 80%;
+    }
+
+}
+
+
+@keyframes loading {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}

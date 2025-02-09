@@ -1,0 +1,14 @@
+/*      Variables       */
+/*      Colores     */
+:root {
+    /*Template.html*/
+    --color-test: #186CA8;
+    --login-form-color: #e0e0e0;
+    --color-input: #ffffff;
+    --color-font-input: #2727a8;
+    --color-shadow-input: #706d6d;
+    --color-font-input-placeholder: #aeaeb6;
+
+    --size-font-input: 12px;
+    --size-font-input-focus: 16px;
+}
